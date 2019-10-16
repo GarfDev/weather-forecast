@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Loading from "./components/Loading"
+import MainPage from "./components/MainPage"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [isLoading, setLoading] = useState(true)
+  const [weatherData, setWeatherData] = useState([])
+  const [todayData, setTodayData] = useState(null)
+  if(isLoading) return <Loading getLoading={setLoading} changeWeatherData={setWeatherData} changeTodayData={setTodayData}/>
+  return <MainPage weatherList={weatherData} todayWeather={todayData}/>
 }
 
 export default App;

@@ -1,22 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loading-container{
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.main-container{
+  color: white;
+  background-image: url("https://media0.giphy.com/media/9YNAim10KNUeA/source.gif");
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forecast-container{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forecast-card{
+  margin: 10px;
+  display:flex;
+  min-width: 14vw;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.todayData{
+  border: 2px solid white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 40px;
+  text-align: center;
 }
