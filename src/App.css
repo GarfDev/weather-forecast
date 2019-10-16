@@ -21,6 +21,7 @@
 }
 
 .forecast-container{
+  animation-duration: 10s;
   display:flex;
   justify-content:center;
   align-items: center;
@@ -36,6 +37,19 @@
   border-radius: 40px;
   flex-direction: column;
   align-items: center;
+  transition-duration: 0.5s;
+}
+
+.forecast-card:hover{
+  margin: 5px 10px 10px 10px;
+  display:flex;
+  min-width: 14vw;
+  padding: 10px;
+  border: 5px solid white;
+  border-radius: 40px;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: 0.5s;
 }
 
 .cards-container{
@@ -51,4 +65,20 @@
   margin: 10px;
   border-radius: 40px;
   text-align: center;
+}
+
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

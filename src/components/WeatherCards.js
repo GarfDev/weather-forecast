@@ -23,7 +23,7 @@ const LeftArrow = () => {
 
 export default function WeatherCards(props) {
   return (
-    <div className="forecast-container">
+    <div className="forecast-container fadeIn">
       <div className="container todayData">
         <h3>{props.todayData.name}</h3>
         <p>
